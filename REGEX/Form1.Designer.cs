@@ -32,15 +32,15 @@ namespace REGEX
             this.lb_movil = new System.Windows.Forms.Label();
             this.lb_mail = new System.Windows.Forms.Label();
             this.lb_SW = new System.Windows.Forms.Label();
-            this.tbox_movil = new System.Windows.Forms.TextBox();
-            this.tbox_mail = new System.Windows.Forms.TextBox();
-            this.tbox_SW = new System.Windows.Forms.TextBox();
+            this.txt_movil = new System.Windows.Forms.TextBox();
+            this.txt_mail = new System.Windows.Forms.TextBox();
+            this.txt_SW = new System.Windows.Forms.TextBox();
             this.bnt_movil = new System.Windows.Forms.Button();
             this.bnt_mail = new System.Windows.Forms.Button();
             this.bnt_SW = new System.Windows.Forms.Button();
-            this.tbox_movil_y = new System.Windows.Forms.TextBox();
-            this.tbox_mail_y = new System.Windows.Forms.TextBox();
-            this.tbox_SW_y = new System.Windows.Forms.TextBox();
+            this.txt_movil_y = new System.Windows.Forms.TextBox();
+            this.txt_mail_y = new System.Windows.Forms.TextBox();
+            this.txt_SW_y = new System.Windows.Forms.TextBox();
             this.pnl_movil = new System.Windows.Forms.Panel();
             this.pnl_mail = new System.Windows.Forms.Panel();
             this.pnl_SW = new System.Windows.Forms.Panel();
@@ -73,26 +73,26 @@ namespace REGEX
             this.lb_SW.TabIndex = 2;
             this.lb_SW.Text = "Codi Star Wars:";
             // 
-            // tbox_movil
+            // txt_movil
             // 
-            this.tbox_movil.Location = new System.Drawing.Point(97, 41);
-            this.tbox_movil.Name = "tbox_movil";
-            this.tbox_movil.Size = new System.Drawing.Size(187, 20);
-            this.tbox_movil.TabIndex = 3;
+            this.txt_movil.Location = new System.Drawing.Point(97, 41);
+            this.txt_movil.Name = "txt_movil";
+            this.txt_movil.Size = new System.Drawing.Size(187, 20);
+            this.txt_movil.TabIndex = 3;
             // 
-            // tbox_mail
+            // txt_mail
             // 
-            this.tbox_mail.Location = new System.Drawing.Point(97, 77);
-            this.tbox_mail.Name = "tbox_mail";
-            this.tbox_mail.Size = new System.Drawing.Size(187, 20);
-            this.tbox_mail.TabIndex = 4;
+            this.txt_mail.Location = new System.Drawing.Point(97, 77);
+            this.txt_mail.Name = "txt_mail";
+            this.txt_mail.Size = new System.Drawing.Size(187, 20);
+            this.txt_mail.TabIndex = 4;
             // 
-            // tbox_SW
+            // txt_SW
             // 
-            this.tbox_SW.Location = new System.Drawing.Point(97, 112);
-            this.tbox_SW.Name = "tbox_SW";
-            this.tbox_SW.Size = new System.Drawing.Size(187, 20);
-            this.tbox_SW.TabIndex = 5;
+            this.txt_SW.Location = new System.Drawing.Point(97, 112);
+            this.txt_SW.Name = "txt_SW";
+            this.txt_SW.Size = new System.Drawing.Size(187, 20);
+            this.txt_SW.TabIndex = 5;
             // 
             // bnt_movil
             // 
@@ -102,6 +102,7 @@ namespace REGEX
             this.bnt_movil.TabIndex = 6;
             this.bnt_movil.Text = "Verificar";
             this.bnt_movil.UseVisualStyleBackColor = true;
+            this.bnt_movil.Click += new System.EventHandler(this.bnt_movil_Click);
             // 
             // bnt_mail
             // 
@@ -121,33 +122,37 @@ namespace REGEX
             this.bnt_SW.Text = "Verificar";
             this.bnt_SW.UseVisualStyleBackColor = true;
             // 
-            // tbox_movil_y
+            // txt_movil_y
             // 
-            this.tbox_movil_y.BackColor = System.Drawing.SystemColors.Info;
-            this.tbox_movil_y.Location = new System.Drawing.Point(434, 41);
-            this.tbox_movil_y.Name = "tbox_movil_y";
-            this.tbox_movil_y.Size = new System.Drawing.Size(354, 20);
-            this.tbox_movil_y.TabIndex = 9;
+            this.txt_movil_y.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_movil_y.Enabled = false;
+            this.txt_movil_y.Location = new System.Drawing.Point(434, 41);
+            this.txt_movil_y.Name = "txt_movil_y";
+            this.txt_movil_y.Size = new System.Drawing.Size(354, 20);
+            this.txt_movil_y.TabIndex = 9;
+            this.txt_movil_y.Text = "^\\(?\\+\\d{1,3}\\)?-\\d{3}.\\d{2}.\\d{2}.\\d{2}$";
             // 
-            // tbox_mail_y
+            // txt_mail_y
             // 
-            this.tbox_mail_y.BackColor = System.Drawing.SystemColors.Info;
-            this.tbox_mail_y.Location = new System.Drawing.Point(434, 77);
-            this.tbox_mail_y.Name = "tbox_mail_y";
-            this.tbox_mail_y.Size = new System.Drawing.Size(354, 20);
-            this.tbox_mail_y.TabIndex = 10;
+            this.txt_mail_y.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_mail_y.Enabled = false;
+            this.txt_mail_y.Location = new System.Drawing.Point(434, 77);
+            this.txt_mail_y.Name = "txt_mail_y";
+            this.txt_mail_y.Size = new System.Drawing.Size(354, 20);
+            this.txt_mail_y.TabIndex = 10;
             // 
-            // tbox_SW_y
+            // txt_SW_y
             // 
-            this.tbox_SW_y.BackColor = System.Drawing.SystemColors.Info;
-            this.tbox_SW_y.Location = new System.Drawing.Point(434, 112);
-            this.tbox_SW_y.Name = "tbox_SW_y";
-            this.tbox_SW_y.Size = new System.Drawing.Size(354, 20);
-            this.tbox_SW_y.TabIndex = 11;
+            this.txt_SW_y.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_SW_y.Enabled = false;
+            this.txt_SW_y.Location = new System.Drawing.Point(434, 112);
+            this.txt_SW_y.Name = "txt_SW_y";
+            this.txt_SW_y.Size = new System.Drawing.Size(354, 20);
+            this.txt_SW_y.TabIndex = 11;
             // 
             // pnl_movil
             // 
-            this.pnl_movil.BackColor = System.Drawing.Color.Maroon;
+            this.pnl_movil.BackColor = System.Drawing.SystemColors.Menu;
             this.pnl_movil.Location = new System.Drawing.Point(302, 39);
             this.pnl_movil.Name = "pnl_movil";
             this.pnl_movil.Size = new System.Drawing.Size(33, 23);
@@ -155,7 +160,7 @@ namespace REGEX
             // 
             // pnl_mail
             // 
-            this.pnl_mail.BackColor = System.Drawing.Color.Maroon;
+            this.pnl_mail.BackColor = System.Drawing.SystemColors.Menu;
             this.pnl_mail.Location = new System.Drawing.Point(302, 75);
             this.pnl_mail.Name = "pnl_mail";
             this.pnl_mail.Size = new System.Drawing.Size(33, 23);
@@ -163,7 +168,7 @@ namespace REGEX
             // 
             // pnl_SW
             // 
-            this.pnl_SW.BackColor = System.Drawing.Color.Maroon;
+            this.pnl_SW.BackColor = System.Drawing.SystemColors.Menu;
             this.pnl_SW.Location = new System.Drawing.Point(302, 110);
             this.pnl_SW.Name = "pnl_SW";
             this.pnl_SW.Size = new System.Drawing.Size(33, 23);
@@ -177,15 +182,15 @@ namespace REGEX
             this.Controls.Add(this.pnl_SW);
             this.Controls.Add(this.pnl_mail);
             this.Controls.Add(this.pnl_movil);
-            this.Controls.Add(this.tbox_SW_y);
-            this.Controls.Add(this.tbox_mail_y);
-            this.Controls.Add(this.tbox_movil_y);
+            this.Controls.Add(this.txt_SW_y);
+            this.Controls.Add(this.txt_mail_y);
+            this.Controls.Add(this.txt_movil_y);
             this.Controls.Add(this.bnt_SW);
             this.Controls.Add(this.bnt_mail);
             this.Controls.Add(this.bnt_movil);
-            this.Controls.Add(this.tbox_SW);
-            this.Controls.Add(this.tbox_mail);
-            this.Controls.Add(this.tbox_movil);
+            this.Controls.Add(this.txt_SW);
+            this.Controls.Add(this.txt_mail);
+            this.Controls.Add(this.txt_movil);
             this.Controls.Add(this.lb_SW);
             this.Controls.Add(this.lb_mail);
             this.Controls.Add(this.lb_movil);
@@ -201,15 +206,15 @@ namespace REGEX
         private System.Windows.Forms.Label lb_movil;
         private System.Windows.Forms.Label lb_mail;
         private System.Windows.Forms.Label lb_SW;
-        private System.Windows.Forms.TextBox tbox_movil;
-        private System.Windows.Forms.TextBox tbox_mail;
-        private System.Windows.Forms.TextBox tbox_SW;
+        private System.Windows.Forms.TextBox txt_movil;
+        private System.Windows.Forms.TextBox txt_mail;
+        private System.Windows.Forms.TextBox txt_SW;
         private System.Windows.Forms.Button bnt_movil;
         private System.Windows.Forms.Button bnt_mail;
         private System.Windows.Forms.Button bnt_SW;
-        private System.Windows.Forms.TextBox tbox_movil_y;
-        private System.Windows.Forms.TextBox tbox_mail_y;
-        private System.Windows.Forms.TextBox tbox_SW_y;
+        private System.Windows.Forms.TextBox txt_movil_y;
+        private System.Windows.Forms.TextBox txt_mail_y;
+        private System.Windows.Forms.TextBox txt_SW_y;
         private System.Windows.Forms.Panel pnl_movil;
         private System.Windows.Forms.Panel pnl_mail;
         private System.Windows.Forms.Panel pnl_SW;
